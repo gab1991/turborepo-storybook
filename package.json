@@ -1,23 +1,30 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.25.2",
-    "prettier": "^3.0.3",
-    "turbo": "latest"
-  },
-  "packageManager": "npm@8.5.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"clean": "turbo run clean && rm -rf node_modules",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"release": "turbo run build --filter=docs^... && changeset publish"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.25.2",
+		"@parcel/packager-ts": "^2.10.3",
+		"@parcel/transformer-typescript-types": "^2.10.3",
+		"prettier": "^3.0.3",
+		"turbo": "latest",
+		"typescript": "^5.3.3"
+	},
+	"packageManager": "npm@8.5.0",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"volta": {
+		"node": "20.10.0",
+		"npm": "10.2.3"
+	}
 }
